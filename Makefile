@@ -31,8 +31,8 @@ LIB_NAME = libagilepil
 ####### 2) Directories for the installation
 
 # Prefix for each installed program. Only ABSOLUTE PATH
-prefix=$(HOME)/ADC
-adc_prefix=$(prefix)/ADC
+prefix=$(AGILE)
+adc_prefix=$(prefix)
 
 exec_prefix=$(prefix)
 # The directory to install the binary files in.
