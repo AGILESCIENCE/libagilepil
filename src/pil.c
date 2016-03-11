@@ -1590,7 +1590,6 @@ Return code:	standard PIL error code or PIL_OK (zero)
 
 int	PIL_merge_pfiles(PIL_PFILE *srcfile, PIL_PFILE *destfile)
   { int r = PIL_OK;
-    int modified = 0;
     PIL_PARAM **src = NULL;
     PIL_PARAM **dest = NULL;
     PIL_PARAM **srcend;
@@ -1620,14 +1619,14 @@ int	PIL_merge_pfiles(PIL_PFILE *srcfile, PIL_PFILE *destfile)
         dp < destend && PIL_FORMAT_OK == (*dp)->format)
         { comparison = strcmp((*sp)->strname, (*dp)->strname);
           if (comparison > 0)
-            { modified = 1;
+            {
               /* System parameter > user parameter, means user
                  parameter not valid in the system file, so remove it. */
               ++dp;
               continue;
             }
           else if (comparison < 0)
-            { modified = 1;
+            {
               /* System parameter < user parameter, means user
                  file is missing a parameter which is in the system file,
                  so add it. */

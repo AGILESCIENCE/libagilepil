@@ -79,7 +79,7 @@ DATA_DIR = data
 CC       = gcc
 CXX      = g++
 #Insert the optional parameter to the compiler. The CFLAGS could be changed externally by the user
-CFLAGS   = -Wall
+CFLAGS   = -g -O2 -pipe
 
 #Set INCPATH to add the inclusion paths
 # INCPATH = -I ./include -I$(AGILE_LIBWCS_INCLUDE)

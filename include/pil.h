@@ -68,7 +68,7 @@ History:	10-May-98 (JB) : PILGetReal4 function added
 #endif
 
 /* SCREW 1326: Add version identifier. */
-static const char * pilversion[] = {"ISDC component pil 1.9.7"};
+static const char pilversion[] = {"ISDC component pil 1.9.7"};
 
 #if defined(__cplusplus) && ! defined(__CINT__)
 extern "C" {
